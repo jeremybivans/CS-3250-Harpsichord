@@ -1,0 +1,11 @@
+</project>
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="HelloWorld" default="build" basedir=".">
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+            <target name="compile" depends="init">
+        <javac destdir="build/main" srcdir="src/main/java" includeantruntime="false"/>
+        <javac destdir="build/test" classpathref="test.classpath" srcdir="src/test/java" includeantruntime="false"/>
+    </target>
